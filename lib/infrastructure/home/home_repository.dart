@@ -61,7 +61,7 @@ class HomeRepository implements IHomeRepository {
             if (isConnected) {
               final response = await apiServices.updateSurveyForm(bodyParam);
               if (response.isSuccessful) {
-                // await localDataSourceImpl.delete();
+                await localDataSourceImpl.delete();
                 print("Data inserted successfully");
                 return right(unit); // Return right(unit) on success
               } else {
