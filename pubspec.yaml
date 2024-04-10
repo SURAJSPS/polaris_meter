@@ -58,16 +58,8 @@ dependencies:
   flutter_dotenv: ^5.1.0
   minio_flutter:
 
-#  minio_flutter:
-#    git:
-#      url: https://github.com/subhashDev11/minio_flutter.git
-#      ref: main
 
 
-
-#
-#dependency_overrides:
-#  http: any
 
 
 

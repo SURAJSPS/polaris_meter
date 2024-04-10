@@ -1,7 +1,5 @@
 import 'package:dartz/dartz.dart';
 import 'package:polaris_meter/common_libs.dart';
-import 'package:polaris_meter/domain/core/network/network_info.dart';
-import 'package:polaris_meter/domain/local/repository/survey_form_repository.dart';
 
 class HomeRepository implements IHomeRepository {
   final ApiService apiServices;
@@ -63,7 +61,7 @@ class HomeRepository implements IHomeRepository {
             if (isConnected) {
               final response = await apiServices.updateSurveyForm(bodyParam);
               if (response.isSuccessful) {
-                await localDataSourceImpl.delete();
+                // await localDataSourceImpl.delete();
                 print("Data inserted successfully");
                 return right(unit); // Return right(unit) on success
               } else {
